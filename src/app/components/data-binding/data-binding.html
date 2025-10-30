@@ -1,0 +1,55 @@
+<div (scroll)="onWindowSizeChange()">
+
+
+    <p>data-binding works!</p>
+
+    <table style="width: 100%;">
+        <tr>
+            <td><span>{{courseName}}</span></td>
+            <td><input type="text" value="{{age}}" name="" id=""></td>
+            <td>{{currentDate}}</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" [value]="age" />
+            </td>
+            <td>
+                <input type="text" [minLength]="minTextLength">
+            </td>
+            <td>
+                <span [class]="spanClassName">Demo</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{age}}
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="age">
+            </td>
+            <td>
+                <input type="checkbox" [(ngModel)]="isActive">
+            </td>
+            <td><span>{{isActive}}</span></td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+
+    <table style="width: 100%;background-color: red;" (mouseenter)="onMouseEnnter()">
+        <tr>
+            <td>
+                <button>Show Alert</button>
+            </td>
+            <td>
+                <select (change)="onCityChanged()">
+                    <option value="">Dhaka</option>
+                    <option value="">Cumilla</option>
+                    <option value="">Sylhet</option>
+                    <option value="">Rajshahi</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</div>
